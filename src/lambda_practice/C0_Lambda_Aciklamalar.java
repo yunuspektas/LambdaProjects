@@ -131,5 +131,6 @@ public class C0_Lambda_Aciklamalar {
     satir.map(t->t.split(" ")).
                     flatMap(Arrays::stream). kelimelere ulasmamizi saglar
 
+
     */
 }
