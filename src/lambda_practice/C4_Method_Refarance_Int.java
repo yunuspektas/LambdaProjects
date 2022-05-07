@@ -1,4 +1,5 @@
 package lambda_practice;
+
 // lambda da method kullanimi :
 //ilk olarak class adi yazilir
 //sonra  :: noktalar konur
