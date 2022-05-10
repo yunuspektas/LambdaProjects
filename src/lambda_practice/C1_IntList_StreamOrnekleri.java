@@ -110,15 +110,28 @@ public class C1_IntList_StreamOrnekleri {
     }
 
     // S14: listenin 100 e esit elemani yok mu ?
+    public static boolean yuzeesit(List<Integer> l) {
+        return l.stream().noneMatch(t -> t == 100);  //true
+    }
 
 
     // S15: listenin sifira esit elemani yok mu?
+    public static boolean sifiraesit(List<Integer> l) {
+        return l.stream().noneMatch(t -> t == 0); //false, 0 var
+    }
 
 
     // S16:  listenin ilk 5 elemanini topla?
-
+    public static int ilkBesTop(List<Integer> list) {
+        return list.stream().limit(5).reduce(0, (x, y) -> x + y);
+    }
 
     //S17: listenin son bes elemaninin  listele
 
+    public static List<Integer> sonBes(List<Integer> l) {
+        long n = l.size() - 5; //son bes demek ,8 elemanli bir listem var son 5 icin, 5 cikardigimda 3 unu atlayip son besi yazdiracak
+
+        return l.stream().skip(n).collect(Collectors.toList());
+    }
 
 }
